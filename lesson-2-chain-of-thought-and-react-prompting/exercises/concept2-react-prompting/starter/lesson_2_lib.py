@@ -6,7 +6,6 @@ from IPython.display import Markdown, display
 class OpenAIModels(str, Enum):
     GPT_4O_MINI = "gpt-4o-mini"
     GPT_41_MINI = "gpt-4.1-mini"
-    GPT_41_NANO = "gpt-4.1-nano"
 
 # Helper function to display responses as Markdown, horizontally
 def display_responses(*args):
@@ -23,7 +22,7 @@ def display_responses(*args):
     markdown_string += "</tr></table>"
     display(Markdown(markdown_string))
 
-def get_completion(messages = None, model="gpt-4.1-nano", client = None):
+def get_completion(messages = None, model="gpt-4.1-mini", client = None):
     """
     Function to get a completion from the OpenAI API.
     Args:
